@@ -93,19 +93,14 @@ export class FFmpegParameters {
   }
 
   private static async allocateddPort(type: string): Promise<number> {
-    try {
-      // Call pickPort function and await its result
-      const port = await pickPort({
-        type: type as 'tcp' | 'udp',
-        ip: '0.0.0.0',
-        reserveTimeout: 15,
-      });
+    // Call pickPort function and await its result
+    const port = await pickPort({
+      type: type as 'tcp' | 'udp',
+      ip: '0.0.0.0',
+      reserveTimeout: 15,
+    });
 
-      return port; // Return the allocated port
-    } catch (error) {
-      // Handle any errors that might occur during port allocation
-      throw error; // Rethrow the error to propagate it further if needed
-    }
+    return port; // Return the allocated port
   }
 
   public static async allocateTCPPort(): Promise<number> {

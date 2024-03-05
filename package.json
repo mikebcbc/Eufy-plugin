@@ -6,7 +6,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/homebridge-eufy-security/plugin.git"
+    "url": "git://github.com/mikebcbc/Eufy-plugin/plugin.git"
   },
   "funding": [
     {

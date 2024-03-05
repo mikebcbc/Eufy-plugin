@@ -17,6 +17,7 @@ import {
 } from 'homebridge';
 import { SessionInfo } from '../controller/streamingDelegate';
 
+
 export class FFmpegParameters {
 
   public progressPort: number;

@@ -39,7 +39,7 @@ jobs:
       - run: git config --global user.name '[Workflow]'
       - run: git config --global user.email '<>'
       - run: npm version prerelease --preid=beta -m "[BETA] %s"
-      - run: npm update homebridge-eufy-security
+      - run: npm update homebridge-eufy-security-mikebcbc
       - run: git push --follow-tags
 
   publish:

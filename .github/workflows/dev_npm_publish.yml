@@ -3,7 +3,7 @@ name: BETA NPM Build Version Publish
 on: 
   push:
     branches:
-    - beta
+    - hksv
     paths-ignore:
       - '.github/**'
       - '**.md'

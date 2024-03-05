@@ -32,13 +32,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: beta
+          ref: hksv
           submodules: 'true'
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - run: git config --global user.name '[Workflow]'
       - run: git config --global user.email '<>'
-      - run: npm version prerelease --preid=beta -m "[BETA] %s"
+      - run: npm version prerelease --preid=hksv -m "[BETA] %s"
       - run: npm update homebridge-eufy-security-mikebcbc
       - run: git push --follow-tags
 
@@ -48,13 +48,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: beta
+          ref: hksv
           submodules: 'true'
       - uses: actions/setup-node@v3
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npm publish --access public --tag beta
+      - run: npm publish --access public --tag hksv
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}

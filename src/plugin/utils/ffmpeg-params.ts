@@ -96,7 +96,7 @@ export class FFmpegParameters {
     try {
       // Call pickPort function and await its result
       const port = await pickPort({
-        type: type as "tcp" | "udp",
+        type: type as 'tcp' | 'udp',
         ip: '0.0.0.0',
         reserveTimeout: 15,
       });
@@ -104,7 +104,6 @@ export class FFmpegParameters {
       return port; // Return the allocated port
     } catch (error) {
       // Handle any errors that might occur during port allocation
-      console.error('Error allocating port:', error);
       throw error; // Rethrow the error to propagate it further if needed
     }
   }
